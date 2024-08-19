@@ -8,6 +8,7 @@ class CheckoutPage(BasePage):
     def __init__(self,driver):
         super().__init__(driver)
 
+   #checkout user details
     firstName_filed = "first-name"
     secondName_filed = "last-name"
     postCode_filed = "postal-code"
