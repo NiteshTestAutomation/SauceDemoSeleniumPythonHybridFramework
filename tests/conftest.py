@@ -2,8 +2,10 @@ import pytest
 from selenium import webdriver
 
 from utilities import ReadConfiguration
+
 @pytest.fixture()
 def setup_and_teardown(request):
+
     browserName = ReadConfiguration.read_Configuaration("info", "browser")
     global driver
     driver = None

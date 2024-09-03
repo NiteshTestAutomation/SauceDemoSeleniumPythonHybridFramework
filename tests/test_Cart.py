@@ -12,6 +12,7 @@ from utilities import ExcelReader
 class TestCart(BaseTest):
     @pytest.mark.parametrize("username,password", ExcelReader.get_data_from_excel("excelFile/SauceLab.xlsx", "Login"))
     def test_gotoCartandCheckoutProduct(self,username,password):
+        #self.logger("---*** Cart Test ***---")
         login = LoginPage(self.driver)
         login.enterLoginDetails(username,password)
         product = ProductPage(self.driver)
