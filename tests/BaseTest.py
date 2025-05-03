@@ -6,5 +6,5 @@ from utilities import CustomLogger
 
 class BaseTest:
 
-    logger = CustomLogger.Logger.gen_Log()
-    pass
+   logger = CustomLogger.Logger.gen_Log()
+    #pass

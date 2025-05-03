@@ -9,9 +9,10 @@ from utilities.CustomLogger import Logger
 
 class TestLogin(BaseTest):
 
+
   @pytest.mark.parametrize("username,password", ExcelReader.get_data_from_excel("excelFile/SauceLab.xlsx", "Login"))
   def test_loginsaucedemoapp(self,username,password):
-      #self.logger("---*** Login Test ***---")
+
       login = LoginPage(self.driver)
       login.enterLoginDetails(username,password)
       product = ProductPage(self.driver)
